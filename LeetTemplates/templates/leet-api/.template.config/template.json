@@ -1,0 +1,58 @@
+﻿{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Denis Ekart",
+  "classifications": [ "1337", "api", "demo" ],
+  "identity": "DenisEkart.Demo.Templates.LeetApi",
+  "name": "LeetApi Demo Template",
+  "shortName": "leet-api",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "LeetSample",
+  "primaryOutputs": [
+    {
+      "path": "LeetSample.csproj"
+    }
+  ],
+  "preferNameDirectory": true,
+  "symbols": {
+    "content": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "tretton37",
+      "replaces": "@@value"
+    },
+    "needHelp": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false"
+    },
+    "skipRestore": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "If specified, skips the automatic restore of the project on create.",
+      "defaultValue": "false"
+    },
+    "portNumber": {
+      "type": "generated",
+      "generator": "random",
+      "parameters": {
+        "low": 5001,
+        "high": 50000
+      },
+      "replaces": "5000"
+    }
+  },
+  "postActions": [
+    {
+      "condition": "(!skipRestore)",
+      "description": "Restore NuGet packages required by this project.",
+      "manualInstructions": [
+        { "text": "Run 'dotnet restore'" }
+      ],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
+    }
+  ]
+}
