@@ -9,6 +9,15 @@
     "language": "js",
     "type": "project"
   },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": ["**/node_modules/**/*"]
+        }
+      ]
+    }
+  ],
   "symbols": {
     "content": {
       "type": "parameter",
