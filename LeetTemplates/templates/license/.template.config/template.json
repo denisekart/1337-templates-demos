@@ -1,0 +1,53 @@
+﻿{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Denis Ekart",
+  "classifications": [ "1337", "license", "demo" ],
+  "identity": "DenisEkart.Demo.Templates.License",
+  "name": "LeetApi Demo Template",
+  "shortName": "license",
+  "tags": {
+    "type": "item"
+  },
+  "sourceName": "LicenseItemSample",
+  "sources": [
+    {
+      "source": "./MIT",
+      "target": "./",
+      "condition": "(licenseType == \"mit\")"
+    },
+    {
+      "source": "./CUSTOM",
+      "target": "./",
+      "condition": "(licenseType == \"custom\")"
+    }
+  ],
+  "symbols": {
+    "thisYear": {
+      "type": "generated",
+      "generator": "now",
+      "parameters": {
+        "format": "yyyy"
+      },
+      "replaces":  "<YEAR>"
+    },
+    "licenseAuthor": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "",
+      "replaces": "<AUTHOR>"
+    },
+    "licenseType": {
+      "type": "parameter",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "mit"
+        },
+        {
+          "choice": "custom"
+        }
+      ],
+      "defaultValue": "mit"
+    }
+  }
+}

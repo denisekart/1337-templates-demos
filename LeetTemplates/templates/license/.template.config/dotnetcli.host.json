@@ -1,0 +1,12 @@
+﻿{
+  "symbolInfo": {
+    "licenseAuthor": {
+      "longName": "license-author",
+      "shortName": "au"
+    },
+    "licenseType": {
+      "longName": "license-type",
+      "shortName": "ty"
+    }
+  }
+}
