@@ -1,0 +1,20 @@
+{
+  "name": "leet-express",
+  "version": "1.0.0",
+  "description": "LeetExpress demo template",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "1337",
+    "express",
+    "api",
+    "demo"
+  ],
+  "author": "Denis Ekart",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

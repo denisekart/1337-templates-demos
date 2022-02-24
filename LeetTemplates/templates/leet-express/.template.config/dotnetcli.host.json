@@ -1,0 +1,16 @@
+﻿{
+  "symbolInfo": {
+    "content": {
+      "longName": "content",
+      "shortName": "c"
+    },
+    "skipInstall": {
+      "longName": "no-restore",
+      "shortName": "r"
+    },
+    "needHelp": {
+      "longName": "help-me",
+      "shortName": "j"
+    }
+  }
+}

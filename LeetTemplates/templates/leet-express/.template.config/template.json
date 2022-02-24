@@ -1,0 +1,55 @@
+﻿{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Denis Ekart",
+  "classifications": [ "1337", "api", "demo", "express" ],
+  "identity": "DenisEkart.Demo.Templates.LeetExpress",
+  "name": "LeetExpress Demo Template",
+  "shortName": "leet-express",
+  "tags": {
+    "language": "js",
+    "type": "project"
+  },
+  "symbols": {
+    "content": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "tretton37",
+      "replaces": "@@value"
+    },
+    "needHelp": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false"
+    },
+    "skipInstall": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "If specified, skips the automatic install of the project on create.",
+      "defaultValue": "false"
+    },
+    "portNumber": {
+      "type": "generated",
+      "generator": "random",
+      "parameters": {
+        "low": 3001,
+        "high": 30000
+      },
+      "replaces": "3000"
+    }
+  },
+  "postActions": [
+    {
+      "condition": "(!skipInstall)",
+      "description": "Restore NPM packages required by this project.",
+      "manualInstructions": [
+        { "text": "Run 'npm install'" }
+      ],
+      "actionId": "3A7C4B45-1F5D-4A30-959A-51B88E82B5D2",
+      "args": {
+        "executable": "npm.cmd",
+        "args": "install"
+      },
+      "continueOnError": true
+    }
+  ]
+}
