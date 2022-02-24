@@ -5,6 +5,7 @@
   "identity": "DenisEkart.Demo.Templates.LeetApi",
   "name": "LeetApi Demo Template",
   "shortName": "leet-api",
+  "defaultName": "LeetSample1",
   "tags": {
     "language": "C#",
     "type": "project"
